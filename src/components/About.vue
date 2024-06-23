@@ -9,10 +9,10 @@ import Features from '../components/Features.vue'
 
         <p>Benzersiz deneyime hazır mısın?</p>
         <p>
-            Doğanın kalbinde yer alan bungalov otelimiz, görkemli dağlarla çevrili sakin bir sığınak sunmaktadır.
-            Kaş merkezine sadece 15 dakikalık sürüş mesafesinde bulunan otelimiz, inziva ve eğlencenin mükemmel
-            karışımını sunmaktadır.
-            ulaşılabilirlik. Keşfedilecek kadar yakınken, doğal çevrenin huzur ve sessizliğinin tadını çıkarın 🏝️✨
+            Doğanın kalbinde yer alan bungalovumuz, görkemli dağlarla çevrili sakin bir sığınak sunmaktadır.
+            Kaş merkezine arabayla sadece 15 dakika uzaklıkta bulunan bungalovumuz, inziva ve erişilebilirliğin mükemmel
+            bir karışımını sunmaktadır. Keşfedilecek kadar yakınken, doğal çevrenin huzur ve sessizliğinin tadını
+            çıkarın 🏝️✨
         </p>
         <ImageGallery></ImageGallery>
 

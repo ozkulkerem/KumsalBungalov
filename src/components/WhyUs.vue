@@ -99,6 +99,10 @@
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     /* Safari ve iOS */
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .prop img {
@@ -107,6 +111,8 @@
     max-width: 250px;
     aspect-ratio: 1/1;
     margin: 20px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .prop h3 {
@@ -140,10 +146,12 @@
     z-index: 1;
     opacity: 0;
     transform: rotateY(0deg);
-    transition: all 0.4s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     /* Safari ve iOS */
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
 }
 
 .overlay p {
@@ -155,22 +163,28 @@
     opacity: 1;
     transform: rotateY(0deg);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    -webkit-transform: rotateY(0deg);
+    -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    z-index: 2;
 }
 
 @keyframes flip {
     0% {
         opacity: 1;
         transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
     }
 
     50% {
         opacity: 0;
         transform: rotateY(90deg);
+        -webkit-transform: rotateY(90deg);
     }
 
     100% {
         opacity: 1;
         transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
     }
 }
 

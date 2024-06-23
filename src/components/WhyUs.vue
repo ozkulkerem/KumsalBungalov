@@ -96,6 +96,9 @@
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 30px 40px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /* Safari ve iOS */
 }
 
 .prop img {
@@ -131,17 +134,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom,
-            rgba(206, 245, 223, 0.9),
-            rgba(164, 209, 198, 0.9),
-            rgba(128, 173, 172, 0.9),
-            rgba(72, 161, 170, 0.9));
+    background: linear-gradient(to bottom, rgba(206, 245, 223, 0.9), rgba(164, 209, 198, 0.9), rgba(128, 173, 172, 0.9), rgba(72, 161, 170, 0.9));
     border-radius: 20px;
     list-style: none;
     z-index: 1;
     opacity: 0;
     transform: rotateY(0deg);
     transition: all 0.4s ease-in-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Safari ve iOS */
 }
 
 .overlay p {
@@ -150,9 +152,9 @@
 }
 
 .prop:hover .overlay {
-    animation-name: flip;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    opacity: 1;
+    transform: rotateY(0deg);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 @keyframes flip {
@@ -169,6 +171,25 @@
     100% {
         opacity: 1;
         transform: rotateY(0deg);
+    }
+}
+
+@-webkit-keyframes flip {
+
+    /* Safari ve iOS */
+    0% {
+        opacity: 1;
+        -webkit-transform: rotateY(0deg);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: rotateY(90deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: rotateY(0deg);
     }
 }
 

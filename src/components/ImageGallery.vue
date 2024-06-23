@@ -96,7 +96,7 @@ onBeforeUnmount(() => {
         <div class='gallery-track'>
             <div v-for="n in 13" :key="n" class='card'>
                 <div class='card-image-wrapper'>
-                    <img :src="`/gallery/${n}.jpg`" :alt="`Gallery image ${n}`">
+                    <img :src="`/KumsalBungalov/gallery/${n}.jpg`" :alt="`Gallery image ${n}`">
                 </div>
             </div>
         </div>

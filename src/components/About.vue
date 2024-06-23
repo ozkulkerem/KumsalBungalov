@@ -4,7 +4,7 @@ import Features from '../components/Features.vue'
 </script>
 <template>
     <section class="about">
-        <!-- <Features></Features> -->
+        <Features></Features>
         <h2>Kumsal Bungalov - Doğanın İçinde Huzuru Yaşayın</h2>
 
         <p>Benzersiz deneyime hazır mısın?</p>
